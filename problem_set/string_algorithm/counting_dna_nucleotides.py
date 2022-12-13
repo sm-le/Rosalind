@@ -14,6 +14,9 @@ def count_ACGT_v1(sequence:str) -> str:
 
     Args:
         sequence: a nucleotide sequence
+
+    Returns:
+        string(count(A)\scount(C)\scount(G)\scount(T))
     """
 
     # First direct counting
@@ -30,6 +33,9 @@ def count_ACGT_v2(sequence:str) -> str:
 
     Args:
         sequence: a nucleotide sequence
+
+    Returns:
+        string(count(A)\scount(C)\scount(G)\scount(T))
     """
 
     # Loop dictionary
@@ -48,6 +54,9 @@ def count_ACGT_v3(sequence:str) -> str:
 
     Args:
         sequence: a nucleotide sequence
+    
+    Returns:
+        string(count(A)\scount(C)\scount(G)\scount(T))
     """
     from collections import Counter
 
