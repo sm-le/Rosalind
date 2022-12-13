@@ -13,7 +13,7 @@ def count_ACGT_v1(sequence:str) -> str:
     nucleotide sequence
 
     Args:
-        sequence: a nucleotide sequence only comprised of ACGT
+        sequence: a nucleotide sequence
     """
 
     # First direct counting
@@ -29,7 +29,7 @@ def count_ACGT_v2(sequence:str) -> str:
     nucleotide sequence
 
     Args:
-        sequence: a nucleotide sequence only comprised of ACGT
+        sequence: a nucleotide sequence
     """
 
     # Loop dictionary
@@ -47,7 +47,7 @@ def count_ACGT_v3(sequence:str) -> str:
     nucleotide sequence
 
     Args:
-        sequence: a nucleotide sequence only comprised of ACGT
+        sequence: a nucleotide sequence
     """
     from collections import Counter
 
