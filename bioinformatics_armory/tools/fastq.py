@@ -74,6 +74,7 @@ class Fastq():
 
         # records
         self.records = list()
+        self.arrays = list()
 
     @staticmethod
     def parse(file:str):
@@ -112,7 +113,12 @@ class Fastq():
             except StopIteration:
                 pass
     
-    def _avgclean(self, threshold:int=28):
+    def _avgreadclean(self, threshold:int=28):
+        """Remove reads based on average read quality
+
+        Args:
+            threshold = base quality threshold
+        """
         records = list()
         remove_count = 0
 
@@ -131,7 +137,13 @@ class Fastq():
 
         return remove_count
     
-    def _baseclean(self, threshold:int=28, percentage:int=90):
+    def _percreadclean(self, threshold:int=28, percentage:int=90):
+        """Remove reads based on percentages of read passing threshold
+
+        Args:
+            threshold = base quality threshold
+        """
+
         records = list()
         remove_count = 0
 
@@ -151,3 +163,16 @@ class Fastq():
         self.records = records
 
         return len(self.records)
+    
+    def _getallquals(self):
+        """get all quality array
+
+        Args:
+            threshold = base quality threshold
+        """
+        
+        for record in self.records:
+            qscores = [phred_table[i] for i in record.qual]
+            
+            self.arrays.append(qscores)
+
