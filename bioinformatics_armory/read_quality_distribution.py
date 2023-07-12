@@ -28,6 +28,6 @@ def get_removed_record(file:str, threshold:int) -> int:
 
     f = Fastq(file)
     f._parse()
-    m = f._avgclean(threshold)
+    m = f._avgreadclean(threshold)
 
     return m
