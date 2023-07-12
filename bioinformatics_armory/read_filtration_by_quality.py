@@ -37,6 +37,6 @@ def get_passed_record(file:str, threshold:int, percentage:int) -> int:
 
     f = Fastq(file)
     f._parse()
-    m = f._baseclean(threshold,percentage)
+    m = f._percreadclean(threshold,percentage)
 
     return m
