@@ -297,7 +297,7 @@ translation_table = {
                     }
 
 
-def translate(sequence:str, tnum:int=1) -> str:
+def translate(sequence:str, tnum:str='1') -> str:
     """Translate D/RNA to protein
 
     Args:
