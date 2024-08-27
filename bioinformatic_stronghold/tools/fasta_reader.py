@@ -80,5 +80,5 @@ class FastaFile:
     def collect(self):
         """Collect information
         """
-
-        return self.body
+        self.parse()
+        yield from self.body
