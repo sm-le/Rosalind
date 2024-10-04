@@ -1,2 +1,2 @@
-# Rosalind
-Rosalind practice code repository
+# Algorithm Practice
+Algorithm practice code repository
