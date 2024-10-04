@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 example_dataset*
 *.ipynb
-test*
+test.txt
